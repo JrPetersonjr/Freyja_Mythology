@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1224" viewBox="0 0 1600 1224">
+<rect width="100%" height="100%" fill="#FFFFFF" />
+<text x="40" y="38" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#505050">[Blueberry Slice 6/6]</text>
+<text x="40" y="60" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">          &lt;div class="page"&gt;</text>
+<text x="40" y="82" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">            &lt;h2&gt;Appendix: The Shadow Index&lt;/h2&gt;</text>
+<text x="40" y="104" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">            &lt;div class="rubric"&gt;Context for names and places&lt;/div&gt;</text>
+<text x="40" y="126" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000"></text>
+<text x="40" y="148" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">            &lt;img class="ink-graphic" src="images/shadow_index.jpg" alt="Shadow Index emblem"&gt;</text>
+<text x="40" y="170" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">            &lt;p class="caption"&gt;The Shadow Index emblem.&lt;/p&gt;</text>
+<text x="40" y="192" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000"></text>
+<text x="40" y="214" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">            &lt;p class="dropcap"&gt;</text>
+<text x="40" y="236" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">              The following notes offer brief explanations and outward paths for further reading...</text>
+<text x="40" y="258" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">            &lt;/p&gt;</text>
+<text x="40" y="280" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">          &lt;/div&gt;</text>
+<text x="40" y="302" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000"></text>
+<text x="40" y="324" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">        &lt;/div&gt;</text>
+<text x="40" y="346" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">      &lt;/div&gt;</text>
+<text x="40" y="368" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">    &lt;/div&gt;</text>
+<text x="40" y="390" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">  &lt;/div&gt;</text>
+<text x="40" y="412" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000"></text>
+<text x="40" y="434" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">  &lt;script&gt;</text>
+<text x="40" y="456" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">    const pages = document.querySelectorAll('.page');</text>
+<text x="40" y="478" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">    let currentPage = 0;</text>
+<text x="40" y="500" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000"></text>
+<text x="40" y="522" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">    function showPage(index) {</text>
+<text x="40" y="544" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">      pages.forEach((page, i) =&gt; {</text>
+<text x="40" y="566" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">        page.classList.remove('active', 'left');</text>
+<text x="40" y="588" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">        if (i === index) page.classList.add('active');</text>
+<text x="40" y="610" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">        else if (i &lt; index) page.classList.add('left');</text>
+<text x="40" y="632" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">      });</text>
+<text x="40" y="654" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">      currentPage = index;</text>
+<text x="40" y="676" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">    }</text>
+<text x="40" y="698" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000"></text>
+<text x="40" y="720" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">    function nextPage() {</text>
+<text x="40" y="742" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">      if (currentPage &lt; pages.length - 1) showPage(currentPage + 1);</text>
+<text x="40" y="764" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">    }</text>
+<text x="40" y="786" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000"></text>
+<text x="40" y="808" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">    function prevPage() {</text>
+<text x="40" y="830" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">      if (currentPage &gt; 0) showPage(currentPage - 1);</text>
+<text x="40" y="852" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">    }</text>
+<text x="40" y="874" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000"></text>
+<text x="40" y="896" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">    function goToPage(index) {</text>
+<text x="40" y="918" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">      if (index &gt;= 0 &amp;&amp; index &lt; pages.length) showPage(index);</text>
+<text x="40" y="940" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">    }</text>
+<text x="40" y="962" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000"></text>
+<text x="40" y="984" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">    showPage(0);</text>
+<text x="40" y="1006" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">  &lt;/script&gt;</text>
+<text x="40" y="1028" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000"></text>
+<text x="40" y="1050" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">&lt;/body&gt;</text>
+<text x="40" y="1072" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">&lt;/html&gt;</text>
+<text x="40" y="1094" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000"></text>
+<text x="40" y="1116" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000"></text>
+<text x="40" y="1194.0" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#FF0000" font-weight="bold">&gt;STUDENT CODE DON&apos;T DELETE&lt;</text>
+</svg>

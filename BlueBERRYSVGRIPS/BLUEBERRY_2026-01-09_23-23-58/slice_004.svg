@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1818" viewBox="0 0 1600 1818">
+<rect width="100%" height="100%" fill="#FFFFFF" />
+<text x="40" y="38" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#505050">[Blueberry Slice 4/6]</text>
+<text x="40" y="60" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">      max-width: 40%;</text>
+<text x="40" y="82" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">      margin: 0 0 10px 18px;</text>
+<text x="40" y="104" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">      border: 1px solid rgba(0,0,0,0.35);</text>
+<text x="40" y="126" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">      padding: 4px;</text>
+<text x="40" y="148" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">      background: rgba(255,255,255,0.5);</text>
+<text x="40" y="170" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">      filter: grayscale(100%) contrast(130%);</text>
+<text x="40" y="192" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">    }</text>
+<text x="40" y="214" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000"></text>
+<text x="40" y="236" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">    .caption {</text>
+<text x="40" y="258" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">      font-size: 0.78rem;</text>
+<text x="40" y="280" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">      font-style: italic;</text>
+<text x="40" y="302" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">      color: #5c4a35;</text>
+<text x="40" y="324" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">      margin-bottom: 6px;</text>
+<text x="40" y="346" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">    }</text>
+<text x="40" y="368" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000"></text>
+<text x="40" y="390" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">    .name {</text>
+<text x="40" y="412" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">      font-variant: small-caps;</text>
+<text x="40" y="434" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">      letter-spacing: 0.04em;</text>
+<text x="40" y="456" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">      color: var(--rubric-red);</text>
+<text x="40" y="478" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">    }</text>
+<text x="40" y="500" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000"></text>
+<text x="40" y="522" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">    .wiki-link {</text>
+<text x="40" y="544" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">      color: var(--link-red);</text>
+<text x="40" y="566" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">      text-decoration: underline;</text>
+<text x="40" y="588" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">      text-decoration-color: #b95a3c;</text>
+<text x="40" y="610" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">      font-weight: 600;</text>
+<text x="40" y="632" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">    }</text>
+<text x="40" y="654" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000"></text>
+<text x="40" y="676" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">    .wiki-link:hover {</text>
+<text x="40" y="698" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">      color: var(--link-red-hover);</text>
+<text x="40" y="720" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">      text-decoration-color: var(--link-red);</text>
+<text x="40" y="742" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">    }</text>
+<text x="40" y="764" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000"></text>
+<text x="40" y="786" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">  &lt;/style&gt;</text>
+<text x="40" y="808" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">&lt;/head&gt;</text>
+<text x="40" y="830" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000"></text>
+<text x="40" y="852" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">&lt;body&gt;</text>
+<text x="40" y="874" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000"></text>
+<text x="40" y="896" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">  &lt;!-- Top navigation --&gt;</text>
+<text x="40" y="918" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">  &lt;nav id="top-nav"&gt;</text>
+<text x="40" y="940" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">    &lt;button onclick="goToPage(0)"&gt;Intro&lt;/button&gt;</text>
+<text x="40" y="962" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">    &lt;button onclick="goToPage(1)"&gt;Lady of Many Realms&lt;/button&gt;</text>
+<text x="40" y="984" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">    &lt;button onclick="goToPage(2)"&gt;Brísingamen&lt;/button&gt;</text>
+<text x="40" y="1006" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">    &lt;button onclick="goToPage(3)"&gt;The Gilded Price&lt;/button&gt;</text>
+<text x="40" y="1028" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">    &lt;button onclick="goToPage(4)"&gt;Falcon Cloak&lt;/button&gt;</text>
+<text x="40" y="1050" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">    &lt;button onclick="goToPage(5)"&gt;Chariot &amp; Boar&lt;/button&gt;</text>
+<text x="40" y="1072" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">    &lt;button onclick="goToPage(6)"&gt;Appendix&lt;/button&gt;</text>
+<text x="40" y="1094" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">  &lt;/nav&gt;</text>
+<text x="40" y="1116" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000"></text>
+<text x="40" y="1138" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">  &lt;div id="book-container"&gt;</text>
+<text x="40" y="1160" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">    &lt;div id="book"&gt;</text>
+<text x="40" y="1182" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000"></text>
+<text x="40" y="1204" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">      &lt;button id="prev-btn" onclick="prevPage()"&gt;⟵&lt;/button&gt;</text>
+<text x="40" y="1226" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">      &lt;button id="next-btn" onclick="nextPage()"&gt;⟶&lt;/button&gt;</text>
+<text x="40" y="1248" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000"></text>
+<text x="40" y="1270" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">      &lt;div id="codex"&gt;</text>
+<text x="40" y="1292" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000"></text>
+<text x="40" y="1314" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">        &lt;!-- Tabs --&gt;</text>
+<text x="40" y="1336" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">        &lt;div id="tabs"&gt;</text>
+<text x="40" y="1358" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">          &lt;div class="tab" onclick="goToPage(0)"&gt;Intro&lt;/div&gt;</text>
+<text x="40" y="1380" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">          &lt;div class="tab" onclick="goToPage(1)"&gt;Lady&lt;/div&gt;</text>
+<text x="40" y="1402" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">          &lt;div class="tab" onclick="goToPage(2)"&gt;Brísing&lt;/div&gt;</text>
+<text x="40" y="1424" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">          &lt;div class="tab" onclick="goToPage(3)"&gt;Gilded&lt;/div&gt;</text>
+<text x="40" y="1446" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">          &lt;div class="tab" onclick="goToPage(4)"&gt;Falcon&lt;/div&gt;</text>
+<text x="40" y="1468" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">          &lt;div class="tab" onclick="goToPage(5)"&gt;Chariot&lt;/div&gt;</text>
+<text x="40" y="1490" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">          &lt;div class="tab" onclick="goToPage(6)"&gt;Appendix&lt;/div&gt;</text>
+<text x="40" y="1512" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">        &lt;/div&gt;</text>
+<text x="40" y="1534" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000"></text>
+<text x="40" y="1556" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">        &lt;!-- Pages --&gt;</text>
+<text x="40" y="1578" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">        &lt;div id="pages"&gt;</text>
+<text x="40" y="1600" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000"></text>
+<text x="40" y="1622" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">          &lt;!-- PAGE 0 --&gt;</text>
+<text x="40" y="1644" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">          &lt;div class="page"&gt;</text>
+<text x="40" y="1666" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">            &lt;h1&gt;The Freyja Codex&lt;/h1&gt;</text>
+<text x="40" y="1688" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">            &lt;div class="rubric"&gt;Trials, Ordeals, and Ascension&lt;/div&gt;</text>
+<text x="40" y="1710" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000"></text>
+<text x="40" y="1788.0" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#FF0000" font-weight="bold">&gt;STUDENT CODE DON&apos;T DELETE&lt;</text>
+</svg>

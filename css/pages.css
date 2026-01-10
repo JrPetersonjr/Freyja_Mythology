@@ -1,70 +1,58 @@
-/* Freyja Codex – Pages
-   Vellum, margins, inner content frame. */
+/* ============================
+   MARGINALIA SYSTEM (Decorated)
+   ============================ */
 
-.codex-book {
-  background: #1a1108;
-  border-radius: 14px;
-  box-shadow: 0 0 35px rgba(0, 0, 0, 0.8);
-  position: relative;
-  overflow: visible;
-  transition: opacity 0.6s ease, transform 0.6s ease;
-}
-
-.codex-book--hidden {
-  opacity: 0;
-  pointer-events: none;
-  transform: scale(0.98);
-}
-
-.codex-book--visible {
-  opacity: 1;
-  pointer-events: auto;
-  transform: scale(1);
-}
-
-.codex-page {
+/* Base marginalia styling */
+.page .marginalia,
+.codex-page-inner .marginalia {
   position: absolute;
-  top: 8%;
-  bottom: 8%;
-  width: 46%;
-  background: #f5eee2;
-  border-radius: 6px;
-  overflow: hidden;
-}
-
-.codex-page--left {
-  left: 4%;
-}
-
-.codex-page--right {
-  right: 4%;
-}
-
-/* Turning page overlays both; JS controls side and animation */
-
-.codex-page--turn {
-  left: 4%;
-  width: 46%;
+  font-family: "Cascadia Mono", monospace;
+  font-size: 0.75rem;
+  color: #7a0000; /* crimson-blood */
+  max-width: 140px;
+  opacity: 0.85;
+  line-height: 1.2;
   pointer-events: none;
-  opacity: 0;
 }
 
-.codex-page-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  padding: 1.8rem var(--codex-page-margin);
-  overflow: hidden;
-  color: #2b2118;
-  font-family: "EB Garamond", "Georgia", serif;
-  font-size: 1rem;
-  line-height: 1.5;
+/* Placement variants */
+.marginalia.outer {
+  right: -120px;
+  top: 40px;
 }
 
-/* Text defaults; decorative.css will enhance further */
+.marginalia.inner {
+  left: -120px;
+  top: 40px;
+}
 
-.codex-page-inner h1,
-.codex-page-inner h2,
-.codex-page-inner h3 {
-  margin-top: 0;
+.marginalia.top {
+  top: -20px;
+  left: 20px;
+}
+
+.marginalia.bottom {
+  bottom: -20px;
+  left: 20px;
+}
+
+/* Runic marginalia */
+.page .runic,
+.codex-page-inner .runic {
+  position: absolute;
+  font-family: "Cascadia Mono", monospace;
+  font-size: 0.9rem;
+  color: #5a0000; /* darker blood */
+  opacity: 0.9;
+  letter-spacing: 0.15rem;
+  pointer-events: none;
+}
+
+/* Runic styles */
+.runic.carved {
+  text-shadow: 0 0 2px #300000;
+}
+
+.runic.blood-inked {
+  text-shadow: 0 0 4px #8a0000;
 }

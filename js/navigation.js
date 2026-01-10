@@ -1,74 +1,71 @@
-// Freyja Codex – Navigation Logic
-// The quiet law that decides where the reader stands: which page, which chapter, which side.
+// js/navigation.js
 
 (function () {
-  const state = {
-    currentPage: 1,
-    isTurning: false
-  };
+  const prevBtn = document.getElementById("codex-prev");
+  const nextBtn = document.getElementById("codex-next");
+  const indicatorEl = document.getElementById("codex-page-indicator");
 
-  function getChapters() {
-    return window.FREYJA_CONTENT_MAP.chapters;
-  }
+  let currentSpread = 0;
+  let totalSpreads = 0;
+  let chapterStartSpreadByIndex = []; // maps chapterIndex -> spread index
 
-  function findChapterForPage(pageNumber) {
-    return getChapters().find(
-      (ch) => pageNumber >= ch.startPage && pageNumber <= ch.endPage
-    );
-  }
+  function computeChapterSpreads() {
+    const map = window.FREYJA_CONTENT_MAP;
+    if (!map || !Array.isArray(map.chapters)) return;
 
-  function getTotalPages() {
-    const chapters = getChapters();
-    const last = chapters[chapters.length - 1];
-    return last.endPage;
-  }
+    chapterStartSpreadByIndex = [];
 
-  function canTurnTo(pageNumber) {
-    if (pageNumber < 1 || pageNumber > getTotalPages()) return false;
-    return true;
-  }
-
-  function setCurrentPage(pageNumber) {
-    state.currentPage = pageNumber;
-    const event = new CustomEvent("codex:pageChange", {
-      detail: {
-        currentPage: state.currentPage,
-        chapter: findChapterForPage(state.currentPage)
-      }
+    let pageCountBefore = 0;
+    map.chapters.forEach((chapter, chapterIndex) => {
+      const pageNumbers = Object.keys(chapter.pages || {}).length;
+      const startSpread = Math.floor(pageCountBefore / 2);
+      chapterStartSpreadByIndex[chapterIndex] = startSpread;
+      pageCountBefore += pageNumbers;
     });
-    window.dispatchEvent(event);
   }
 
-  function turnNext() {
-    if (state.isTurning) return;
-    const target = state.currentPage + 1;
-    if (!canTurnTo(target)) return;
-    const event = new CustomEvent("codex:requestTurn", {
-      detail: { direction: "forward", targetPage: target }
-    });
-    window.dispatchEvent(event);
+  function updateIndicator(meta) {
+    if (!indicatorEl || !meta) return;
+    const { spreadIndex, totalSpreads } = meta;
+    indicatorEl.textContent = `Spread ${spreadIndex + 1} / ${totalSpreads}`;
   }
 
-  function turnPrev() {
-    if (state.isTurning) return;
-    const target = state.currentPage - 1;
-    if (!canTurnTo(target)) return;
-    const event = new CustomEvent("codex:requestTurn", {
-      detail: { direction: "backward", targetPage: target }
-    });
-    window.dispatchEvent(event);
+  function goToSpread(index) {
+    const loader = window.CodexPageLoader;
+    if (!loader) return;
+
+    const maxSpread = loader.getTotalSpreads() - 1;
+    const clamped = Math.max(0, Math.min(index, maxSpread));
+
+    currentSpread = clamped;
+    totalSpreads = loader.getTotalSpreads();
+    loader.loadSpread(currentSpread);
   }
 
-  // External API (lightweight, global but contained)
-  window.FREYJA_NAV = {
-    getState: () => ({ ...state }),
-    setCurrentPage,
-    turnNext,
-    turnPrev,
-    findChapterForPage,
-    getTotalPages,
-    setTurning: (value) => {
-      state.isTurning = !!value;
-    }
+  function next() {
+    goToSpread(currentSpread + 1);
+  }
+
+  function prev() {
+    goToSpread(currentSpread - 1);
+  }
+
+  function goToChapter(chapterIndex) {
+    if (chapterIndex < 0 || chapterIndex >= chapterStartSpreadByIndex.length) return;
+    const spread = chapterStartSpreadByIndex[chapterIndex];
+    goToSpread(spread);
+  }
+
+  if (prevBtn) prevBtn.addEventListener("click", prev);
+  if (nextBtn) nextBtn.addEventListener("click", next);
+
+  computeChapterSpreads();
+
+  window.CodexNavigation = {
+    goToSpread,
+    next,
+    prev,
+    goToChapter,
+    updateIndicator
   };
 })();

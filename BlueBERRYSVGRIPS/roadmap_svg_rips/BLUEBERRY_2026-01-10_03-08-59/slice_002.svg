@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1818" viewBox="0 0 1600 1818">
+<rect width="100%" height="100%" fill="#FFFFFF" />
+<text x="40" y="38" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#505050">[Blueberry Slice 2/5]</text>
+<text x="40" y="60" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">marginalia fade‑in</text>
+<text x="40" y="82" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000"></text>
+<text x="40" y="104" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">page‑edge texture</text>
+<text x="40" y="126" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000"></text>
+<text x="40" y="148" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">Outcome:</text>
+<text x="40" y="170" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">A complete, polished, public‑ready Freyja Codex.</text>
+<text x="40" y="192" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000"></text>
+<text x="40" y="214" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">🜃 PHASE 2 — Complete the Hotpatcher Upgrade (30–45 minutes)</text>
+<text x="40" y="236" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">Goal: Turn Weaver v2 into a safe, deterministic patch engine.</text>
+<text x="40" y="258" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000"></text>
+<text x="40" y="280" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">Tasks:</text>
+<text x="40" y="302" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">Move Snapshot Panel above Log Panel</text>
+<text x="40" y="324" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000"></text>
+<text x="40" y="346" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">Add Prepare Snapshot button</text>
+<text x="40" y="368" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000"></text>
+<text x="40" y="390" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">Add InsertBefore / InsertAfter patch modes</text>
+<text x="40" y="412" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000"></text>
+<text x="40" y="434" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">Add ReplaceBlock mode (optional)</text>
+<text x="40" y="456" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000"></text>
+<text x="40" y="478" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">Add snapshot verification (optional)</text>
+<text x="40" y="500" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000"></text>
+<text x="40" y="522" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">Test patch on css/pages.css</text>
+<text x="40" y="544" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000"></text>
+<text x="40" y="566" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">Test patch on js/pageloader.js</text>
+<text x="40" y="588" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000"></text>
+<text x="40" y="610" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">Outcome:</text>
+<text x="40" y="632" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">A fully functional, line‑number‑based hotpatcher.</text>
+<text x="40" y="654" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000"></text>
+<text x="40" y="676" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">🜄 PHASE 3 — Brickboard Phase 1 (2–3 hours)</text>
+<text x="40" y="698" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">Goal: Create the first visual builder layer.</text>
+<text x="40" y="720" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000"></text>
+<text x="40" y="742" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">Tasks:</text>
+<text x="40" y="764" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">Add a new “Brickboard” tab to Weaver</text>
+<text x="40" y="786" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000"></text>
+<text x="40" y="808" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">Create block schema (JSON)</text>
+<text x="40" y="830" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000"></text>
+<text x="40" y="852" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">Create block palette (list of blocks)</text>
+<text x="40" y="874" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000"></text>
+<text x="40" y="896" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">Create block inspector (view/edit payload)</text>
+<text x="40" y="918" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000"></text>
+<text x="40" y="940" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">Add “Generate Patch Spec” button</text>
+<text x="40" y="962" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000"></text>
+<text x="40" y="984" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">Integrate with Weaver’s hotpatcher</text>
+<text x="40" y="1006" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000"></text>
+<text x="40" y="1028" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">Create first block set:</text>
+<text x="40" y="1050" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000"></text>
+<text x="40" y="1072" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">CSS: marginalia</text>
+<text x="40" y="1094" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000"></text>
+<text x="40" y="1116" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">CSS: runic</text>
+<text x="40" y="1138" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000"></text>
+<text x="40" y="1160" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">HTML: SEO meta</text>
+<text x="40" y="1182" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000"></text>
+<text x="40" y="1204" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">Workflow: snapshot+patch</text>
+<text x="40" y="1226" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000"></text>
+<text x="40" y="1248" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">Outcome:</text>
+<text x="40" y="1270" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">A working visual builder that generates patch specs.</text>
+<text x="40" y="1292" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000"></text>
+<text x="40" y="1314" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">🜅 PHASE 4 — Brickboard Phase 2 (6–10 hours)</text>
+<text x="40" y="1336" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">Goal: Add drag‑and‑drop LEGO‑style canvas.</text>
+<text x="40" y="1358" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000"></text>
+<text x="40" y="1380" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">Tasks:</text>
+<text x="40" y="1402" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">Add canvas panel</text>
+<text x="40" y="1424" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000"></text>
+<text x="40" y="1446" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">Add draggable block UI</text>
+<text x="40" y="1468" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000"></text>
+<text x="40" y="1490" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">Add snap rules:</text>
+<text x="40" y="1512" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000"></text>
+<text x="40" y="1534" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">code block → patch block</text>
+<text x="40" y="1556" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000"></text>
+<text x="40" y="1578" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">patch block → target file</text>
+<text x="40" y="1600" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000"></text>
+<text x="40" y="1622" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">target file → snapshot</text>
+<text x="40" y="1644" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000"></text>
+<text x="40" y="1666" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">Add visual connectors</text>
+<text x="40" y="1688" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000"></text>
+<text x="40" y="1710" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">Add “Export Patch Spec”</text>
+<text x="40" y="1788.0" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#FF0000" font-weight="bold">&gt;STUDENT CODE DON&apos;T DELETE&lt;</text>
+</svg>

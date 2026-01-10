@@ -56,3 +56,20 @@
 .runic.blood-inked {
   text-shadow: 0 0 4px #8a0000;
 }
+.codex-image-block {
+  text-align: center;
+  margin-top: 1em;
+}
+
+.codex-image {
+  max-width: 100%;
+  height: auto;
+  border: 2px solid #5c3d2e;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.codex-image-caption {
+  font-style: italic;
+  color: #7a5c4a;
+  margin-top: 0.5em;
+}

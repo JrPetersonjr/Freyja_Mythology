@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>The Freyja Codex – Trials and Ascension</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <style>
+    :root {
+      --vellum: #f7f1e6;
+      --vellum-deep: #efe1c9;
+      --ink: #292018;
+      --rubric-red: #8b0000;
+      --rubric-blue: #284a7e;
+      --border-brown: #8b6c3c;
+      --shadow: 0 18px 45px rgba(0,0,0,0.6);
+      --accent-gold: #c99a3a;
+      --link-red: #7c130f;
+      --link-red-hover: #b21815;
+      --font-body: "Georgia", "Times New Roman", serif;
+      --font-display: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: radial-gradient(circle at top, #3c3a47 0, #1a1822 40%, #050309 100%);
+      font-family: var(--font-body);
+      color: var(--ink);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    /* Top navigation bar */
+    #top-nav {
+      margin-top: 20px;
+      padding: 10px 16px;
+      background: linear-gradient(135deg, #3b2a1b, #24160c);
+      border: 2px solid #5e4228;
+      border-radius: 8px;
+      box-shadow: 0 8px 18px rgba(0,0,0,0.7);
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    #top-nav button {
+      background: #f2e4cc;
+      border: 1px solid #b69866;
+      border-radius: 4px;
+      padding: 6px 10px;
+      font-size: 0.9rem;
+      cursor: pointer;
+      color: var(--ink);
+      font-family: var(--font-body);
+    }
+
+    #top-nav button:hover {
+      background: #fff7e8;
+      border-color: #d5af6b;
+    }
+
+    /* Book container */
+    #book-container {
+      margin-top: 24px;
+      margin-bottom: 40px;
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
+
+    #book {
+      position: relative;
+      width: 820px;
+      height: 520px;
+      background:
+        radial-gradient(circle at top, rgba(255,255,255,0.35) 0, transparent 60%),
+        linear-gradient(135deg, #3a2820, #1e130e);
+      border-radius: 10px;
+      box-shadow: var(--shadow);
+      padding: 18px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Page-turn buttons */
+    #prev-btn, #next-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: #f2e4cc;
+      border: 1px solid #b69764;
+      border-radius: 4px;
+      width: 32px;
+      height: 80px;
+      cursor: pointer;
+      font-size: 1.4rem;
+      font-family: var(--font-display);
+      color: #4a3524;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 0 12px rgba(0,0,0,0.4);
+    }
+
+    #prev-btn { left: -46px; }
+    #next-btn { right: -46px; }
+
+    #prev-btn:hover, #next-btn:hover {
+      background: #fff7e5;
+    }
+
+    /* Inner codex */
+    #codex {
+      position: relative;
+      width: 760px;
+      height: 480px;
+      background:
+        linear-gradient(to right,
+          rgba(0,0,0,0.32) 0,
+          transparent 6%,
+          transparent 50%,
+          rgba(0,0,0,0.32) 100%),
+        linear-gradient(90deg,
+          #f8f0e2 0,
+          #fdf7ea 49.5%,
+          #e7d6b9 50%,
+          #fdf7ea 50.5%,
+          #f8f0e2 100%);
+      border-radius: 6px;
+      border: 1px solid rgba(0,0,0,0.4);
+      overflow: hidden;
+    }
+
+    /* Tabs */
+    #tabs {
+      position: absolute;
+      right: -68px;
+      top: 26px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .tab {
+      background: linear-gradient(180deg, #f7ead1 0, #f0ddbd 100%);
+      border: 1px solid #c5a26b;
+      border-radius: 4px;
+      padding: 6px 6px;
+      cursor: pointer;
+      font-size: 0.7rem;
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: #4b3421;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.4);
+    }
+
+    .tab:hover {
+      background: #fff6e3;
+    }
+
+    /* Pages */
+    #pages {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+
+    .page {
+      position: absolute;
+      top: 0;
+      left: 100%;
+      width: 100%;
+      height: 100%;
+      padding: 34px 48px;
+      overflow-y: auto;
+      color: var(--ink);
+      transition: left 0.6s ease;
+      background:
+        radial-gradient(circle at top left, rgba(228,208,171,0.35) 0, transparent 55%),
+        radial-gradient(circle at bottom right, rgba(224,199,162,0.25) 0, transparent 45%),
+        linear-gradient(180deg, var(--vellum) 0, var(--vellum-deep) 100%);
+      font-size: 0.98rem;
+    }
+
+    .page.active { left: 0; }
+    .page.left { left: -100%; }
+
+    .page h1, .page h2, .page h3 {
+      font-family: var(--font-display);
+      margin-top: 0;
+    }
+
+    .page h1 { font-size: 1.9rem; margin-bottom: 4px; }
+    .page h2 { font-size: 1.3rem; margin-bottom: 4px; color: var(--rubric-red); }
+    .page h3 { font-size: 1.05rem; color: var(--rubric-blue); margin-top: 14px; margin-bottom: 6px; }
+
+    .rubric {
+      color: var(--rubric-red);
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      letter-spacing: 0.16em;
+      margin-bottom: 10px;
+    }
+
+    .dropcap:first-letter {
+      float: left;
+      font-size: 2.6rem;
+      line-height: 1;
+      padding-right: 6px;
+      padding-top: 2px;
+      color: var(--rubric-blue);
+      font-family: var(--font-display);
+    }
+
+    p { margin: 0 0 8px; }
+
+    .ink-graphic {
+      float: right;
+      width: 180px;
+      max-width: 40%;
+      margin: 0 0 10px 18px;
+      border: 1px solid rgba(0,0,0,0.35);
+      padding: 4px;
+      background: rgba(255,255,255,0.5);
+      filter: grayscale(100%) contrast(130%);
+    }
+
+    .caption {
+      font-size: 0.78rem;
+      font-style: italic;
+      color: #5c4a35;
+      margin-bottom: 6px;
+    }
+
+    .name {
+      font-variant: small-caps;
+      letter-spacing: 0.04em;
+      color: var(--rubric-red);
+    }
+
+    .wiki-link {
+      color: var(--link-red);
+      text-decoration: underline;
+      text-decoration-color: #b95a3c;
+      font-weight: 600;
+    }
+
+    .wiki-link:hover {
+      color: var(--link-red-hover);
+      text-decoration-color: var(--link-red);
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- Top navigation -->
+  <nav id="top-nav">
+    <button onclick="goToPage(0)">Intro</button>
+    <button onclick="goToPage(1)">Lady of Many Realms</button>
+    <button onclick="goToPage(2)">Brísingamen</button>
+    <button onclick="goToPage(3)">The Gilded Price</button>
+    <button onclick="goToPage(4)">Falcon Cloak</button>
+    <button onclick="goToPage(5)">Chariot & Boar</button>
+    <button onclick="goToPage(6)">Appendix</button>
+  </nav>
+
+  <div id="book-container">
+    <div id="book">
+
+      <button id="prev-btn" onclick="prevPage()">⟵</button>
+      <button id="next-btn" onclick="nextPage()">⟶</button>
+
+      <div id="codex">
+
+        <!-- Tabs -->
+        <div id="tabs">
+          <div class="tab" onclick="goToPage(0)">Intro</div>
+          <div class="tab" onclick="goToPage(1)">Lady</div>
+          <div class="tab" onclick="goToPage(2)">Brísing</div>
+          <div class="tab" onclick="goToPage(3)">Gilded</div>
+          <div class="tab" onclick="goToPage(4)">Falcon</div>
+          <div class="tab" onclick="goToPage(5)">Chariot</div>
+          <div class="tab" onclick="goToPage(6)">Appendix</div>
+        </div>
+
+        <!-- Pages -->
+        <div id="pages">
+
+          <!-- PAGE 0 -->
+          <div class="page">
+            <h1>The Freyja Codex</h1>
+            <div class="rubric">Trials, Ordeals, and Ascension</div>
+
+            <img class="ink-graphic" src="images/intro_freyja.jpg" alt="Freyja seated with Brísingamen">
+            <p class="caption">Freyja with Brísingamen, in an ink style echoing medieval manuscript art.</p>
+
+            <p class="dropcap">
+              <span class="name">Freyja</span> is one of the most prominent goddesses of the Norse world...
+            </p>
+          </div>
+
+          <!-- PAGE 1 -->
+          <div class="page">
+            <h2>Lady of Many Realms</h2>
+            <div class="rubric">Freyja and the intersection of powers</div>
+
+            <img class="ink-graphic" src="images/lady_of_many_realms.jpg" alt="Freyja as Lady of Many Realms">
+            <p class="caption">A symbolic emblem of the Vanir, gods of fertility and foresight.</p>
+
+            <p class="dropcap">
+              Her name, <em>Freyja</em>, simply means “Lady.” She belongs to the
+              <a class="wiki-link" href="https://en.wikipedia.org/wiki/Vanir" target="_blank">Vanir</a>...
+            </p>
+          </div>
+
+          <!-- PAGE 2 -->
+          <div class="page">
+            <h2>The Brísingamen Ordeal</h2>
+            <div class="rubric">The radiant necklace of sovereignty</div>
+
+            <img class="ink-graphic" src="images/brisingamen_ordeal.jpg" alt="Brísingamen, the golden necklace of Freyja">
+            <p class="caption">Brísingamen, a golden torque forged by dwarves in the deep earth.</p>
+
+            <p class="dropcap">
+              Among Freyja’s treasures, none is more renowned than <span class="name">Brísingamen</span>...
+            </p>
+          </div>
+
+          <!-- PAGE 3 -->
+          <div class="page">
+            <h2>The Gilded Price of Power</h2>
+            <div class="rubric">Freyja’s choice in the dwarven hall</div>
+
+            <img class="ink-graphic" src="images/gilded_price.jpg" alt="Freyja negotiating with the four dwarves">
+            <p class="caption">Freyja in the dwarven hall, negotiating for Brísingamen.</p>
+
+            <p class="dropcap">
+              The dwarves refused silver. They had no need of her wealth...
+            </p>
+          </div>
+
+          <!-- PAGE 4 -->
+          <div class="page">
+            <h2>The Falcon Cloak</h2>
+            <div class="rubric">Seeress between the Nine Realms</div>
+
+            <img class="ink-graphic" src="images/falcon_cloak.jpg" alt="Freyja in falcon form above Yggdrasil">
+            <p class="caption">The falcon cloak, a garment of feather and flight.</p>
+
+            <p class="dropcap">
+              Another of Freyja’s most important possessions is her <span class="name">falcon cloak</span>...
+            </p>
+          </div>
+
+          <!-- PAGE 5 -->
+          <div class="page">
+            <h2>The Chariot and the Boar</h2>
+            <div class="rubric">Travelers and living artifacts</div>
+
+            <img class="ink-graphic" src="images/chariot_and_boar.jpg" alt="Freyja’s chariot and the boar Hildisvíni">
+            <p class="caption">Freyja’s cat‑drawn chariot and the golden boar Hildisvíni.</p>
+
+            <p class="dropcap">
+              Freyja is said to ride in a chariot drawn by two great cats...
+            </p>
+          </div>
+
+          <!-- PAGE 6 -->
+          <div class="page">
+            <h2>Appendix: The Shadow Index</h2>
+            <div class="rubric">Context for names and places</div>
+
+            <img class="ink-graphic" src="images/shadow_index.jpg" alt="Shadow Index emblem">
+            <p class="caption">The Shadow Index emblem.</p>
+
+            <p class="dropcap">
+              The following notes offer brief explanations and outward paths for further reading...
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const pages = document.querySelectorAll('.page');
+    let currentPage = 0;
+
+    function showPage(index) {
+      pages.forEach((page, i) => {
+        page.classList.remove('active', 'left');
+        if (i === index) page.classList.add('active');
+        else if (i < index) page.classList.add('left');
+      });
+      currentPage = index;
+    }
+
+    function nextPage() {
+      if (currentPage < pages.length - 1) showPage(currentPage + 1);
+    }
+
+    function prevPage() {
+      if (currentPage > 0) showPage(currentPage - 1);
+    }
+
+    function goToPage(index) {
+      if (index >= 0 && index < pages.length) showPage(index);
+    }
+
+    showPage(0);
+  </script>
+
+</body>
+</html>

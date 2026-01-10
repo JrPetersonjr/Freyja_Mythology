@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="520" viewBox="0 0 1600 520">
+<rect width="100%" height="100%" fill="#FFFFFF" />
+<text x="40" y="38" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#505050">[Blueberry Slice 11/11]</text>
+<text x="40" y="60" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">        showPage(currentPage - 1);</text>
+<text x="40" y="82" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">      }</text>
+<text x="40" y="104" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">    }</text>
+<text x="40" y="126" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000"></text>
+<text x="40" y="148" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">    function goToPage(index) {</text>
+<text x="40" y="170" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">      if (index &gt;= 0 &amp;&amp; index &lt; pages.length) {</text>
+<text x="40" y="192" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">        showPage(index);</text>
+<text x="40" y="214" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">      }</text>
+<text x="40" y="236" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">    }</text>
+<text x="40" y="258" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000"></text>
+<text x="40" y="280" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">    // Initialize</text>
+<text x="40" y="302" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">    showPage(0);</text>
+<text x="40" y="324" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">  &lt;/script&gt;</text>
+<text x="40" y="346" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">&lt;/body&gt;</text>
+<text x="40" y="368" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">&lt;/html&gt;</text>
+<text x="40" y="390" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000"></text>
+<text x="40" y="412" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000"></text>
+<text x="40" y="490.0" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#FF0000" font-weight="bold">&gt;STUDENT CODE DON&apos;T DELETE&lt;</text>
+</svg>

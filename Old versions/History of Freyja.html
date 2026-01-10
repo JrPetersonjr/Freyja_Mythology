@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Freyja: Trials, Ordeals, and Ascension</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A brief mythology book about the Norse goddess Freyja: her trials, ordeals, artifacts, and ascension." />
+
+  <style>
+    :root {
+      --bg: #0b0c10;
+      --bg-alt: #11131a;
+      --accent: #f6c453;
+      --accent-soft: rgba(246,196,83,0.18);
+      --text: #f4f4f4;
+      --muted: #c2c2c2;
+      --border-soft: #2c3040;
+      --heading: #fdf5d9;
+      --link: #f8d479;
+      --link-hover: #ffe7a6;
+      --shadow-soft: 0 18px 45px rgba(0,0,0,0.7);
+      --font-body: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --font-heading: "Georgia", "Times New Roman", serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: radial-gradient(circle at top, #1b1f33 0%, #05060a 52%, #020308 100%);
+      color: var(--text);
+      font-family: var(--font-body);
+      line-height: 1.7;
+    }
+
+    .page {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 32px 16px 64px;
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 16px 24px;
+      position: relative;
+    }
+
+    header::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      opacity: 0.18;
+      background:
+        radial-gradient(circle at top, rgba(246,196,83,0.4) 0, transparent 55%),
+        radial-gradient(circle at bottom, rgba(60,100,220,0.35) 0, transparent 60%);
+      z-index: -1;
+    }
+
+    .book-frame {
+      background: linear-gradient(145deg, rgba(255,255,255,0.04), rgba(10,11,18,0.9));
+      border-radius: 18px;
+      border: 1px solid var(--border-soft);
+      box-shadow: var(--shadow-soft);
+      padding: 24px 20px 32px;
+      backdrop-filter: blur(16px);
+    }
+
+    .title {
+      font-family: var(--font-heading);
+      font-size: 2.4rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--heading);
+      margin: 0 0 8px;
+    }
+
+    .subtitle {
+      font-size: 1rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      margin-bottom: 20px;
+    }
+
+    .divider {
+      width: 120px;
+      height: 1px;
+      margin: 0 auto 18px;
+      background: linear-gradient(to right, transparent, var(--accent), transparent);
+    }
+
+    .meta {
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .meta span {
+      opacity: 0.9;
+    }
+
+    nav {
+      margin: 32px 0 32px;
+      padding: 18px 20px;
+      border-radius: 14px;
+      background: rgba(9,11,25,0.8);
+      border: 1px solid rgba(246,196,83,0.15);
+    }
+
+    nav h2 {
+      font-family: var(--font-heading);
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--accent);
+      margin: 0 0 10px;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 4px;
+    }
+
+    nav li a {
+      color: var(--link);
+      text-decoration: none;
+      font-size: 0.95rem;
+      padding: 4px 0;
+      display: inline-block;
+    }
+
+    nav li a:hover {
+      color: var(--link-hover);
+      text-decoration: underline;
+    }
+
+    main {
+      margin-top: 16px;
+    }
+
+    section {
+      margin-bottom: 32px;
+      padding: 18px 20px 22px;
+      border-radius: 16px;
+      background: rgba(7,8,16,0.9);
+      border: 1px solid rgba(255,255,255,0.03);
+    }
+
+    section:nth-of-type(odd) {
+      background: radial-gradient(circle at top left, rgba(246,196,83,0.06) 0, transparent 65%), rgba(5,6,12,0.9);
+    }
+
+    section:nth-of-type(even) {
+      background: radial-gradient(circle at top right, rgba(111,169,240,0.08) 0, transparent 65%), rgba(5,7,15,0.9);
+    }
+
+    section h2 {
+      font-family: var(--font-heading);
+      font-size: 1.4rem;
+      margin: 0 0 4px;
+      color: var(--heading);
+    }
+
+    section h3 {
+      font-family: var(--font-heading);
+      font-size: 1.1rem;
+      margin: 16px 0 6px;
+      color: var(--heading);
+    }
+
+    .section-subtitle {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+    }
+
+    p {
+      margin: 0 0 10px;
+      font-size: 1rem;
+      color: var(--text);
+    }
+
+    em {
+      color: var(--accent);
+      font-style: normal;
+    }
+
+    strong {
+      font-weight: 600;
+    }
+
+    .name {
+      color: var(--accent);
+      font-variant: small-caps;
+      letter-spacing: 0.04em;
+    }
+
+    .callout {
+      margin-top: 10px;
+      padding: 10px 12px;
+      border-radius: 10px;
+      background: rgba(9,10,18,0.85);
+      border: 1px solid rgba(246,196,83,0.2);
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+
+    .artifact-list {
+      list-style: none;
+      padding-left: 0;
+      margin: 8px 0 0;
+    }
+
+    .artifact-list li {
+      margin-bottom: 6px;
+      padding-left: 16px;
+      position: relative;
+      font-size: 0.97rem;
+    }
+
+    .artifact-list li::before {
+      content: "✶";
+      position: absolute;
+      left: 0;
+      top: 1px;
+      font-size: 0.7rem;
+      color: var(--accent);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 8px;
+      font-size: 0.95rem;
+    }
+
+    th, td {
+      padding: 8px 10px;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    footer {
+      margin-top: 32px;
+      padding-top: 18px;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      font-size: 0.85rem;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    footer a {
+      color: var(--link);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+      color: var(--link-hover);
+    }
+
+    @media (min-width: 720px) {
+      .book-frame {
+        padding: 28px 32px 36px;
+      }
+
+      section {
+        padding: 22px 24px 26px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <div class="book-frame">
+        <h1 class="title">Freyja</h1>
+        <div class="subtitle">Trials, Ordeals, and Ascension</div>
+        <div class="divider"></div>
+        <p class="meta">
+          <span>A brief mythology book on the Norse goddess Freyja —</span>
+          <br />
+          <span>her intersections of love, war, magic, and death.</span>
+        </p>
+      </div>
+    </header>
+
+    <nav aria-label="Table of Contents">
+      <h2>Contents</h2>
+      <ul>
+        <li><a href="#chapter-1">Chapter I – Lady of Many Realms</a></li>
+        <li><a href="#chapter-2">Chapter II – The Brísingamen Ordeal</a></li>
+        <li><a href="#chapter-3">Chapter III – The Wings of the Falcon</a></li>
+        <li><a href="#chapter-4">Chapter IV – The Chariot and the Boar</a></li>
+        <li><a href="#appendix-shadow-index">Appendix – The Shadow Index</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <!-- Chapter I -->
+      <section id="chapter-1">
+        <h2>Chapter I – Lady of Many Realms</h2>
+        <div class="section-subtitle">Freyja and the intersection of powers</div>
+
+        <p>
+          <span class="name">Freyja</span> was one of the most prominent goddesses of the Norse world. She stands at the crossroads of
+          <strong>love, war, magic, and death</strong>, embodying the full spectrum of human and cosmic experience. The way she carried
+          herself through the ordeals she was destined to endure became the very path of her ascension — not merely into the ranks of
+          the gods, but into the position of one of the most powerful beings in the Norse cosmology.
+        </p>
+
+        <p>
+          Her name, <em>“Freyja”</em>, simply means <strong>“Lady”</strong>. She is a goddess of the <strong>Vanir</strong>, the divine tribe
+          associated with fertility, wisdom, and foresight. Among her many associations, she is the foremost practitioner of
+          <strong>seiðr</strong>, the Norse magic of prophecy, fate‑shaping, and trance, and is often described as the one who taught this
+          art even to <span class="name">Odin</span>.
+        </p>
+
+        <p>
+          Freyja is the daughter of <span class="name">Njörðr</span> and sister of <span class="name">Freyr</span>. After the Aesir–Vanir War,
+          she becomes one of the most influential deities in the unified pantheon, serving as a bridge between two cultures of gods.
+          Through her, the Vanir’s deep connection to fate, fertility, and wealth is woven into the fabric of the Aesir’s rule.
+        </p>
+
+        <div class="callout">
+          <strong>Note:</strong> Freyja’s domains are not separated into neat categories. Her love can be fierce and warlike; her role in
+          death is tender and terrifying. To understand her is to stand where all these currents meet.
+        </div>
+      </section>
+
+      <!-- Chapter II -->
+      <section id="chapter-2">
+        <h2>Chapter II – The Brísingamen Ordeal</h2>
+        <div class="section-subtitle">The radiant price of power</div>
+
+        <p>
+          The ordeal surrounding <span class="name">Brísingamen</span> — her radiant, golden necklace — stands as one of Freyja’s defining trials.
+          It is more than a piece of jewelry; it is a manifestation of sovereignty, beauty, and the cost of power.
+        </p>
+
+        <h3>Forged by four dwarves</h3>
+        <p>
+          Brísingamen was forged by four dwarves of immense skill:
+        </p>
+        <ul class="artifact-list">
+          <li><span class="name">Alfrigg</span></li>
+          <li><span class="name">Dvalinn</span></li>
+          <li><span class="name">Berling</span></li>
+          <li><span class="name">Grerr</span></li>
+        </ul>
+
+        <p>
+          Deep within the earth, in the dim glow of a dwarven workshop, Freyja discovered these craftsmen forging a torque of gold so
+          luminous it rivaled the dawn. She desired it instantly — not out of simple vanity, but because she recognized in it a power
+          and resonance that matched her own nature.
+        </p>
+
+        <h3>The gilded price of Brísingamen</h3>
+        <p>
+          The dwarves were unmoved by wealth. They refused her silver. They refused her status. Instead, they demanded a heavy price of
+          intimacy: <strong>one night with each of them</strong>. This was the only payment they would accept.
+        </p>
+
+        <p>
+          Freyja accepted their terms. Over four nights, she lay with each dwarf in turn. At the end of this ordeal, Brísingamen became
+          hers. In the logic of the myth, this is not a story of disgrace, but of deliberate choice. Freyja knew the cost of power and
+          did not flinch.
+        </p>
+
+        <p>
+          Later, in the <em>Prose Edda</em>, the trickster god <span class="name">Loki</span> steals Brísingamen, and Freyja is forced into another
+          humiliation to reclaim it. She must petition Odin and submit to his conditions, which involve stirring war among kings.
+          Thus, Brísingamen is tied not only to beauty and desire, but also to conflict and the shaping of mortal history.
+        </p>
+
+        <div class="callout">
+          <strong>Interpretation:</strong> The acquisition of Brísingamen highlights Freyja’s agency and her willingness to descend into the
+          “low” realms to claim the highest forms of beauty and power. She crosses boundaries — moral, social, and cosmic — and emerges
+          carrying a symbol that reflects her own complexity.
+        </div>
+      </section>
+
+      <!-- Chapter III -->
+      <section id="chapter-3">
+        <h2>Chapter III – The Wings of the Falcon</h2>
+        <div class="section-subtitle">Seeress between the Nine Realms</div>
+
+        <p>
+          Another of Freyja’s most important artifacts is her <strong>falcon cloak</strong>, known in Old Norse as
+          <em>fjaðrhamr</em>. While the myths are largely silent on its exact origin or forging, its function is clear and powerful:
+          it allows the wearer to <strong>shift shape and fly</strong>.
+        </p>
+
+        <p>
+          With the falcon cloak, Freyja can travel swiftly between worlds, slipping through the Nine Realms like a shadow of feather and
+          wind. She can rise above the mortal plane to perceive the vast web of fate from above, fitting her role as a <strong>völva</strong> —
+          a seeress and practitioner of seiðr.
+        </p>
+
+        <p>
+          The dwarves’ works, like Brísingamen, are solid and metallic, bound to gold and craft. The falcon cloak feels different: it is
+          a form of <strong>biological magic</strong>, as if Freyja’s own nature has taken the form of feathers and air. It is not merely a tool
+          she owns; it is an extension of her ability to move between shapes, roles, and worlds.
+        </p>
+
+        <div class="callout">
+          <strong>Note:</strong> In several myths, other gods borrow the falcon cloak for their own quests, underscoring its status as one of
+          the great shared treasures of the gods — but it remains most closely associated with Freyja herself.
+        </div>
+      </section>
+
+      <!-- Chapter IV -->
+      <section id="chapter-4">
+        <h2>Chapter IV – The Chariot and the Boar</h2>
+        <div class="section-subtitle">Travelers and living artifacts</div>
+
+        <h3>The chariot drawn by cats</h3>
+        <p>
+          Freyja is often described as traveling the worlds in a chariot drawn by <strong>two great cats</strong>. These cats are powerful,
+          untamed creatures, sometimes imagined as akin to the rugged Norwegian forest cats. They embody a tension between the wild and
+          the domestic, reflecting Freyja’s own presence in hearth, field, and battlefield alike.
+        </p>
+
+        <p>
+          In some later traditions, these cats are counted among her gifts from other gods — often linked to <span class="name">Thor</span> — but
+          regardless of origin, they mark her journeys with an unmistakable image: the goddess of love and war riding in a chariot
+          pulled not by horses of conquest, but by the watchful, hunting felines of the threshold.
+        </p>
+
+        <h3>The golden boar Hildisvíni</h3>
+        <p>
+          Freyja also possesses <span class="name">Hildisvíni</span>, the golden boar. This creature is said to have been forged by the dwarves
+          <span class="name">Dain</span> and <span class="name">Nabbi</span>, echoing the pattern of deep, subterranean craftsmanship that surrounds many of her artifacts.
+        </p>
+
+        <p>
+          In the poem <em>Hyndluljóð</em>, it is whispered that Hildisvíni is not merely an animal companion, but actually a disguised
+          human — <span class="name">Óttar the Simple</span>, a devoted worshiper of Freyja. In this tale, she transforms him into a boar of gleaming
+          bristles in order to protect him while they travel together to discover his true ancestry.
+        </p>
+
+        <p>
+          This story hints at a recurring theme in Freyja’s mythology: her artifacts are often <strong>living beings</strong>, or masks for deeper
+          truths. The things she carries, rides, or wears may conceal souls, destinies, or oaths. In Freyja’s world, the line between
+          object and being is thin and charged with magic.
+        </p>
+
+        <div class="callout">
+          <strong>Observation:</strong> Whether cats, boar, or cloak, Freyja’s companions and artifacts are rarely inert. They move, act, and
+          sometimes speak to hidden identities and protective disguises. Her power is relational — she binds beings to her purpose.
+        </div>
+      </section>
+
+      <!-- Appendix -->
+      <section id="appendix-shadow-index">
+        <h2>Appendix – The Shadow Index</h2>
+        <div class="section-subtitle">Contextual notes for the uninitiated</div>
+
+        <p>
+          The following index offers brief explanations of key figures and concepts that appear throughout this mythology of Freyja.
+        </p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Subject</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>The Four Dwarves</td>
+              <td>
+                <span class="name">Alfrigg</span>, <span class="name">Dvalinn</span>, <span class="name">Berling</span>, and <span class="name">Grerr</span>.
+                Four subterranean master craftsmen who forged the necklace Brísingamen. They operate outside the morality and politics
+                of the Aesir, answering only to their own terms and craft.
+              </td>
+            </tr>
+            <tr>
+              <td>Vanir</td>
+              <td>
+                A tribe of gods associated with fertility, wisdom, wealth, and the ability to see and shape the future. Freyja, her
+                brother Freyr, and her father Njörðr are primary Vanir figures who later join the Aesir after the Aesir–Vanir War.
+              </td>
+            </tr>
+            <tr>
+              <td>Seiðr</td>
+              <td>
+                A form of Norse magic concerned with discerning and altering the course of fate. It involves trance, prophecy, and
+                sometimes the re‑weaving of destiny itself. Freyja is its greatest known practitioner and, in many accounts, the one
+                who instructs Odin.
+              </td>
+            </tr>
+            <tr>
+              <td>Fólkvangr</td>
+              <td>
+                Literally “The Field of the People.” This is Freyja’s realm in the afterlife. Half of those slain in battle go to her
+                fields, while the other half go to Odin’s Valhalla. This dual arrangement emphasizes her role as a <strong>psychopomp</strong>,
+                guiding the honored dead and sharing authority over them with Odin.
+              </td>
+            </tr>
+            <tr>
+              <td>Óttar the Simple</td>
+              <td>
+                A mortal devotee of Freyja. In some stories, she transforms him into the boar Hildisvíni so he can safely travel beside
+                her. His presence suggests that Freyja’s artifacts and companions may conceal deeper secrets: hidden humans, oaths, or
+                lines of ancestry.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="callout">
+          <strong>Final note:</strong> Freyja’s mythology does not separate beauty from trial, nor love from war. Her ascension is not a
+          single event but a pattern of choices — descending, bargaining, transforming, and returning with new power.
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        This HTML mythology book presents a brief, story‑driven overview of Freyja, drawn from attested Norse mythic traditions.
+      </p>
+    </footer>
+  </div>
+</body>
+</html>

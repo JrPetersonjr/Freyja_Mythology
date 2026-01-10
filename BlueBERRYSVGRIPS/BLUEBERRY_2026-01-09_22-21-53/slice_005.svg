@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1818" viewBox="0 0 1600 1818">
+<rect width="100%" height="100%" fill="#FFFFFF" />
+<text x="40" y="38" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#505050">[Blueberry Slice 5/11]</text>
+<text x="40" y="60" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">      color: var(--link-red-hover);</text>
+<text x="40" y="82" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">      text-decoration-color: var(--link-red);</text>
+<text x="40" y="104" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">    }</text>
+<text x="40" y="126" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000"></text>
+<text x="40" y="148" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">    /* Tooltip (optional medieval scribe notes) */</text>
+<text x="40" y="170" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">    .tooltip {</text>
+<text x="40" y="192" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">      position: relative;</text>
+<text x="40" y="214" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">      cursor: pointer;</text>
+<text x="40" y="236" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">    }</text>
+<text x="40" y="258" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000"></text>
+<text x="40" y="280" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">    .tooltiptext {</text>
+<text x="40" y="302" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">      visibility: hidden;</text>
+<text x="40" y="324" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">      background: #fff9ec;</text>
+<text x="40" y="346" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">      color: #2a2117;</text>
+<text x="40" y="368" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">      border: 1px solid #bfa37a;</text>
+<text x="40" y="390" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">      padding: 6px 8px;</text>
+<text x="40" y="412" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">      border-radius: 4px;</text>
+<text x="40" y="434" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">      position: absolute;</text>
+<text x="40" y="456" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">      top: -6px;</text>
+<text x="40" y="478" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">      left: 105%;</text>
+<text x="40" y="500" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">      width: 180px;</text>
+<text x="40" y="522" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">      font-size: 0.78rem;</text>
+<text x="40" y="544" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">      z-index: 10;</text>
+<text x="40" y="566" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">      box-shadow: 0 4px 10px rgba(0,0,0,0.4);</text>
+<text x="40" y="588" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">    }</text>
+<text x="40" y="610" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000"></text>
+<text x="40" y="632" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">    .tooltip:hover .tooltiptext {</text>
+<text x="40" y="654" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">      visibility: visible;</text>
+<text x="40" y="676" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">    }</text>
+<text x="40" y="698" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000"></text>
+<text x="40" y="720" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">    /* Sources block */</text>
+<text x="40" y="742" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">    .sources {</text>
+<text x="40" y="764" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">      margin-top: 10px;</text>
+<text x="40" y="786" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">      border-top: 1px solid rgba(0,0,0,0.2);</text>
+<text x="40" y="808" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">      padding-top: 6px;</text>
+<text x="40" y="830" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">      font-size: 0.82rem;</text>
+<text x="40" y="852" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">    }</text>
+<text x="40" y="874" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000"></text>
+<text x="40" y="896" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">    .source-item {</text>
+<text x="40" y="918" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">      margin-bottom: 3px;</text>
+<text x="40" y="940" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">    }</text>
+<text x="40" y="962" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000"></text>
+<text x="40" y="984" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">    @media (max-width: 980px) {</text>
+<text x="40" y="1006" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">      #book {</text>
+<text x="40" y="1028" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">        transform: scale(0.9);</text>
+<text x="40" y="1050" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">      }</text>
+<text x="40" y="1072" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">      #prev-btn { left: -38px; }</text>
+<text x="40" y="1094" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">      #next-btn { right: -38px; }</text>
+<text x="40" y="1116" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">      #tabs { right: -60px; }</text>
+<text x="40" y="1138" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">    }</text>
+<text x="40" y="1160" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000"></text>
+<text x="40" y="1182" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">    @media (max-width: 860px) {</text>
+<text x="40" y="1204" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">      #book {</text>
+<text x="40" y="1226" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">        transform: scale(0.8);</text>
+<text x="40" y="1248" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">      }</text>
+<text x="40" y="1270" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">    }</text>
+<text x="40" y="1292" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000"></text>
+<text x="40" y="1314" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">    @media (max-width: 760px) {</text>
+<text x="40" y="1336" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">      #book {</text>
+<text x="40" y="1358" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">        transform: scale(0.7);</text>
+<text x="40" y="1380" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">      }</text>
+<text x="40" y="1402" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">    }</text>
+<text x="40" y="1424" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">  &lt;/style&gt;</text>
+<text x="40" y="1446" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">&lt;/head&gt;</text>
+<text x="40" y="1468" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">&lt;body&gt;</text>
+<text x="40" y="1490" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000"></text>
+<text x="40" y="1512" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">  &lt;!-- Top navigation bar --&gt;</text>
+<text x="40" y="1534" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">  &lt;nav id="top-nav" aria-label="Chapter navigation"&gt;</text>
+<text x="40" y="1556" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">    &lt;button onclick="goToPage(0)"&gt;Intro&lt;/button&gt;</text>
+<text x="40" y="1578" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">    &lt;button onclick="goToPage(1)"&gt;Lady of Many Realms&lt;/button&gt;</text>
+<text x="40" y="1600" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">    &lt;button onclick="goToPage(2)"&gt;Brísingamen&lt;/button&gt;</text>
+<text x="40" y="1622" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">    &lt;button onclick="goToPage(3)"&gt;The Gilded Price&lt;/button&gt;</text>
+<text x="40" y="1644" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">    &lt;button onclick="goToPage(4)"&gt;Falcon Cloak&lt;/button&gt;</text>
+<text x="40" y="1666" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">    &lt;button onclick="goToPage(5)"&gt;Chariot &amp; Boar&lt;/button&gt;</text>
+<text x="40" y="1688" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">    &lt;button onclick="goToPage(6)"&gt;Appendix&lt;/button&gt;</text>
+<text x="40" y="1710" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">  &lt;/nav&gt;</text>
+<text x="40" y="1788.0" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#FF0000" font-weight="bold">&gt;STUDENT CODE DON&apos;T DELETE&lt;</text>
+</svg>

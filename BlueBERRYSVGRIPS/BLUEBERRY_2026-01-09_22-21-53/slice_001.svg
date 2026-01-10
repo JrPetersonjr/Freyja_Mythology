@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1818" viewBox="0 0 1600 1818">
+<rect width="100%" height="100%" fill="#FFFFFF" />
+<text x="40" y="38" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#505050">[Blueberry Slice 1/11]</text>
+<text x="40" y="60" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">&lt;!DOCTYPE html&gt;</text>
+<text x="40" y="82" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">&lt;html lang="en"&gt;</text>
+<text x="40" y="104" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">&lt;head&gt;</text>
+<text x="40" y="126" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">  &lt;meta charset="UTF-8" /&gt;</text>
+<text x="40" y="148" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">  &lt;title&gt;The Freyja Codex – Trials and Ascension&lt;/title&gt;</text>
+<text x="40" y="170" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;</text>
+<text x="40" y="192" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000"></text>
+<text x="40" y="214" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">  &lt;style&gt;</text>
+<text x="40" y="236" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">    :root {</text>
+<text x="40" y="258" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">      --vellum: #f7f1e6;</text>
+<text x="40" y="280" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">      --vellum-deep: #efe1c9;</text>
+<text x="40" y="302" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">      --ink: #292018;</text>
+<text x="40" y="324" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">      --rubric-red: #8b0000;</text>
+<text x="40" y="346" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">      --rubric-blue: #284a7e;</text>
+<text x="40" y="368" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">      --border-brown: #8b6c3c;</text>
+<text x="40" y="390" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">      --shadow: 0 18px 45px rgba(0,0,0,0.6);</text>
+<text x="40" y="412" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">      --accent-gold: #c99a3a;</text>
+<text x="40" y="434" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">      --link-red: #7c130f;</text>
+<text x="40" y="456" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">      --link-red-hover: #b21815;</text>
+<text x="40" y="478" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">      --font-body: "Georgia", "Times New Roman", serif;</text>
+<text x="40" y="500" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">      --font-display: "Palatino Linotype", "Book Antiqua", Palatino, serif;</text>
+<text x="40" y="522" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">    }</text>
+<text x="40" y="544" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000"></text>
+<text x="40" y="566" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">    * {</text>
+<text x="40" y="588" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">      box-sizing: border-box;</text>
+<text x="40" y="610" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">    }</text>
+<text x="40" y="632" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000"></text>
+<text x="40" y="654" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">    body {</text>
+<text x="40" y="676" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">      margin: 0;</text>
+<text x="40" y="698" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">      padding: 0;</text>
+<text x="40" y="720" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">      background:</text>
+<text x="40" y="742" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">        radial-gradient(circle at top, #3c3a47 0, #1a1822 40%, #050309 100%);</text>
+<text x="40" y="764" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">      font-family: var(--font-body);</text>
+<text x="40" y="786" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">      color: var(--ink);</text>
+<text x="40" y="808" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">      display: flex;</text>
+<text x="40" y="830" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">      flex-direction: column;</text>
+<text x="40" y="852" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">      align-items: center;</text>
+<text x="40" y="874" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">      min-height: 100vh;</text>
+<text x="40" y="896" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">    }</text>
+<text x="40" y="918" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000"></text>
+<text x="40" y="940" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">    /* Top navigation bar (wooden beam look) */</text>
+<text x="40" y="962" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">    #top-nav {</text>
+<text x="40" y="984" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">      margin-top: 20px;</text>
+<text x="40" y="1006" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">      padding: 10px 16px;</text>
+<text x="40" y="1028" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">      background: linear-gradient(135deg, #3b2a1b, #24160c);</text>
+<text x="40" y="1050" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">      border: 2px solid #5e4228;</text>
+<text x="40" y="1072" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">      border-radius: 8px;</text>
+<text x="40" y="1094" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">      box-shadow: 0 8px 18px rgba(0,0,0,0.7);</text>
+<text x="40" y="1116" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">      display: flex;</text>
+<text x="40" y="1138" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">      gap: 8px;</text>
+<text x="40" y="1160" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">      flex-wrap: wrap;</text>
+<text x="40" y="1182" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">      justify-content: center;</text>
+<text x="40" y="1204" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">    }</text>
+<text x="40" y="1226" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000"></text>
+<text x="40" y="1248" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">    #top-nav button {</text>
+<text x="40" y="1270" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">      background: #f2e4cc;</text>
+<text x="40" y="1292" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">      border: 1px solid #b69866;</text>
+<text x="40" y="1314" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">      border-radius: 4px;</text>
+<text x="40" y="1336" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">      padding: 6px 10px;</text>
+<text x="40" y="1358" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">      font-size: 0.9rem;</text>
+<text x="40" y="1380" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">      cursor: pointer;</text>
+<text x="40" y="1402" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">      color: var(--ink);</text>
+<text x="40" y="1424" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">      font-family: var(--font-body);</text>
+<text x="40" y="1446" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">    }</text>
+<text x="40" y="1468" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000"></text>
+<text x="40" y="1490" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">    #top-nav button:hover {</text>
+<text x="40" y="1512" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">      background: #fff7e8;</text>
+<text x="40" y="1534" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">      border-color: #d5af6b;</text>
+<text x="40" y="1556" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">    }</text>
+<text x="40" y="1578" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000"></text>
+<text x="40" y="1600" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">    /* Book container */</text>
+<text x="40" y="1622" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">    #book-container {</text>
+<text x="40" y="1644" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">      margin-top: 24px;</text>
+<text x="40" y="1666" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">      margin-bottom: 40px;</text>
+<text x="40" y="1688" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">      display: flex;</text>
+<text x="40" y="1710" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#000000">      justify-content: center;</text>
+<text x="40" y="1788.0" font-family="Cascadia Mono, Courier New, monospace" font-size="16" fill="#FF0000" font-weight="bold">&gt;STUDENT CODE DON&apos;T DELETE&lt;</text>
+</svg>

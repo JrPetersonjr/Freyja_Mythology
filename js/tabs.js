@@ -1,11 +1,7 @@
 // js/tabs.js - Page-based tabs (one per page, like textbook bookmarks)
 
 (function () {
-  const contentMap = window.FREYJA_CONTENT_MAP;
-  if (!contentMap || !Array.isArray(contentMap)) return;
-
   const tabRail = document.getElementById("codex-tab-rail");
-  if (!tabRail) return;
 
   // Create a tab for each page
   function createTab(pageIndex, spreadIndex, label) {
@@ -36,6 +32,9 @@
   }
 
   function populateTabs() {
+    const contentMap = window.FREYJA_CONTENT_MAP;
+    if (!contentMap || !Array.isArray(contentMap) || !tabRail) return;
+    
     tabRail.innerHTML = "";
     
     // Create one tab per page

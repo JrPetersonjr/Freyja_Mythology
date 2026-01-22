@@ -1,0 +1,41 @@
+/* Freyja Codex – Shadows & Depth
+   Page stacks, gutter, ambient depth. */
+
+.codex-page-stack {
+  position: absolute;
+  top: 8%;
+  bottom: 8%;
+  width: 7%;
+  background:
+    linear-gradient(to right, rgba(0, 0, 0, 0.4), transparent),
+    repeating-linear-gradient(to bottom,
+      rgba(245, 238, 226, 0.7) 0,
+      rgba(245, 238, 226, 0.7) 3px,
+      rgba(225, 210, 190, 0.8) 4px,
+      rgba(225, 210, 190, 0.8) 5px);
+  border-radius: 4px;
+  filter: blur(0.4px);
+  opacity: 0.9;
+}
+
+.codex-page-stack--left {
+  left: -4%;
+}
+
+.codex-page-stack--right {
+  right: -4%;
+}
+
+/* Gutter / spine shadow */
+
+.codex-gutter-shadow {
+  position: absolute;
+  top: 6%;
+  bottom: 6%;
+  left: 50%;
+  width: 4%;
+  transform: translateX(-50%);
+  background: radial-gradient(circle at center, rgba(0, 0, 0, 0.5), transparent 70%);
+  opacity: 0.75;
+  pointer-events: none;
+}

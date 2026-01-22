@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Freyja Codex – Structural Shell -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Freyja Codex</title>
+
+  <!-- Core Styles -->
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/cover.css" />
+  <link rel="stylesheet" href="css/pages.css" />
+  <link rel="stylesheet" href="css/tabs.css" />
+  <link rel="stylesheet" href="css/animation.css" />
+  <link rel="stylesheet" href="css/decorative.css" />
+  <link rel="stylesheet" href="css/shadows.css" />
+</head>
+<body>
+  <!-- Book Wrapper: The physical vessel of the Codex -->
+  <div id="codex-root">
+    <!-- Closed Cover State -->
+    <div id="codex-cover" class="codex-cover codex-cover--closed">
+      <div class="codex-cover-leather">
+        <div class="codex-cover-border"></div>
+        <div class="codex-cover-title">THE FREYJA CODEX</div>
+        <div class="codex-cover-sigil"></div>
+      </div>
+      <button id="codex-open-button" class="codex-open-button">
+        Open the Codex
+      </button>
+    </div>
+
+    <!-- Open Book State -->
+    <div id="codex-book" class="codex-book codex-book--hidden">
+      <!-- Page stack shadows -->
+      <div class="codex-page-stack codex-page-stack--left"></div>
+      <div class="codex-page-stack codex-page-stack--right"></div>
+
+      <!-- Gutter / spine -->
+      <div class="codex-gutter-shadow"></div>
+
+      <!-- Static pages -->
+      <div id="codex-page-left" class="codex-page codex-page--left">
+        <div class="codex-page-inner" data-side="left"></div>
+      </div>
+      <div id="codex-page-right" class="codex-page codex-page--right">
+        <div class="codex-page-inner" data-side="right"></div>
+      </div>
+
+      <!-- Turning page (animation layer) -->
+      <div id="codex-page-turn" class="codex-page codex-page--turn">
+        <div class="codex-page-inner" data-side="turn"></div>
+        <!-- Fire-kiss overlay -->
+        <div class="codex-fire-kiss"></div>
+      </div>
+
+      <!-- Tab rail -->
+      <div id="codex-tab-rail" class="codex-tab-rail codex-tab-rail--hidden">
+        <!-- Tabs populated by JS -->
+      </div>
+
+      <!-- Basic navigation controls (optional; can be hidden later) -->
+      <div class="codex-nav-controls">
+        <button id="codex-prev" class="codex-nav-button">Previous</button>
+        <span id="codex-page-indicator" class="codex-page-indicator"></span>
+        <button id="codex-next" class="codex-nav-button">Next</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Logic layers -->
+<script src="js/contentMap.js"></script>
+<script src="js/pageloader.js"></script>
+<script src="js/navigation.js"></script>
+<script src="js/init.js"></script>
+
+</body>
+</html>
+

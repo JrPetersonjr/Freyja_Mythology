@@ -1,0 +1,72 @@
+/* Freyja Codex – Tabs
+   Chapter markers that ride the pages. */
+
+.codex-tab-rail {
+  position: absolute;
+  top: 10%;
+  bottom: 10%;
+  width: 20%;
+  right: -5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  pointer-events: none;
+}
+
+.codex-tab-rail--hidden {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.codex-tab-rail--visible {
+  opacity: 1;
+  pointer-events: none;
+}
+
+.codex-tab {
+  position: relative;
+  min-width: 7.5rem;
+  padding: 0.3rem 0.7rem;
+  background: #f5eee2;
+  border-radius: 999px;
+  border: 1px solid rgba(120, 92, 54, 0.8);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+  font-family: "Cinzel", "Times New Roman", serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.14em;
+  text-indent: 0.14em;
+  text-transform: uppercase;
+  color: #3d3021;
+  cursor: pointer;
+  pointer-events: auto;
+  background-image: linear-gradient(to right, #f5eee2, #e4d6ba);
+  transform-origin: center;
+  transition: transform 0.2s ease, box-shadow 0.25s ease, background 0.25s ease;
+}
+
+.codex-tab:hover {
+  transform: translateX(2px);
+  box-shadow: 0 0 12px rgba(243, 215, 156, 0.6);
+  background-image: linear-gradient(to right, #f9f2e8, #eadbbf);
+}
+
+.codex-tab--active {
+  box-shadow: 0 0 16px rgba(243, 215, 156, 0.9);
+  border-color: rgba(209, 172, 90, 0.9);
+  background-image: linear-gradient(to right, #faf4ea, #f0dfc2);
+  transform: scale(1.03); /* no translateX here */
+}
+
+
+
+/* Left/right riding state – JS toggles these */
+
+.codex-tab--active.codex-tab--left {
+  transform: translateX(-28%) scale(1.03);
+}
+
+.codex-tab--active.codex-tab--right {
+  transform: translateX(28%) scale(1.03);
+}
+
+

@@ -1,0 +1,28 @@
+# Node modules
+node_modules/
+**/node_modules/
+**/electron/node_modules/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# OS
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# IDEs
+.vscode/
+.idea/
+*.sublime-*
+
+# Build outputs
+dist/
+build/
+*.log

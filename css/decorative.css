@@ -1,0 +1,87 @@
+/* Freyja Codex – Decorative Manuscript Elements
+   Rubrication, drop caps, frames, ornament. */
+
+.codex-page-inner {
+  background-image:
+    radial-gradient(circle at top left, rgba(255, 255, 255, 0.5) 0, transparent 60%),
+    radial-gradient(circle at bottom right, rgba(0, 0, 0, 0.08) 0, transparent 70%);
+  background-color: #f5eee2;
+}
+
+/* Rubricated titles */
+
+.codex-heading-rubric {
+  font-family: "Cinzel", "Times New Roman", serif;
+  letter-spacing: 0.18em;
+  text-indent: 0.18em;
+  text-transform: uppercase;
+  color: #9b2517;
+  font-size: 0.85rem;
+  margin-bottom: 0.2rem;
+}
+
+/* Main chapter title */
+
+.codex-heading-main {
+  font-family: "Cinzel", "Times New Roman", serif;
+  color: #3b2718;
+  font-size: 1.6rem;
+  margin-bottom: 0.6rem;
+}
+
+/* Illuminated drop caps */
+
+.codex-dropcap {
+  float: left;
+  font-family: "Cinzel Decorative", "Times New Roman", serif;
+  font-size: 3.2rem;
+  line-height: 0.85;
+  margin-right: 0.4rem;
+  margin-top: 0.3rem;
+  padding: 0.15rem 0.35rem;
+  color: #3f2714;
+  background: radial-gradient(circle, #f8e9c7 0, #e1c492 60%, #c89b55 100%);
+  border-radius: 4px;
+  box-shadow: 0 0 8px rgba(128, 82, 25, 0.6);
+}
+
+/* Illustrations */
+
+.codex-illustration-frame {
+  border-radius: 4px;
+  border: 1px solid rgba(120, 92, 54, 0.8);
+  padding: 0.35rem;
+  margin: 1rem 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.35);
+  background: radial-gradient(circle at top, #f8f1e3 0, #e3d2b4 70%);
+}
+
+.codex-illustration-frame img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 3px;
+}
+
+/* Chapter sigil */
+
+.codex-chapter-sigil {
+  width: 48px;
+  height: 48px;
+  margin: 0.6rem auto 0.8rem;
+  border-radius: 50%;
+  border: 1px solid rgba(120, 92, 54, 0.9);
+  box-shadow: 0 0 10px rgba(209, 172, 90, 0.6);
+  background: radial-gradient(circle, rgba(252, 222, 171, 0.9), rgba(191, 137, 65, 0.95));
+}
+
+/* Marginalia (optional) */
+
+.codex-marginalia {
+  position: absolute;
+  right: 0.6rem;
+  bottom: 0.8rem;
+  font-size: 0.7rem;
+  color: rgba(90, 65, 42, 0.8);
+  font-style: italic;
+}

@@ -1,0 +1,75 @@
+/* ============================
+   MARGINALIA SYSTEM (Decorated)
+   ============================ */
+
+/* Base marginalia styling */
+.page .marginalia,
+.codex-page-inner .marginalia {
+  position: absolute;
+  font-family: "Cascadia Mono", monospace;
+  font-size: 0.75rem;
+  color: #7a0000; /* crimson-blood */
+  max-width: 140px;
+  opacity: 0.85;
+  line-height: 1.2;
+  pointer-events: none;
+}
+
+/* Placement variants */
+.marginalia.outer {
+  right: -120px;
+  top: 40px;
+}
+
+.marginalia.inner {
+  left: -120px;
+  top: 40px;
+}
+
+.marginalia.top {
+  top: -20px;
+  left: 20px;
+}
+
+.marginalia.bottom {
+  bottom: -20px;
+  left: 20px;
+}
+
+/* Runic marginalia */
+.page .runic,
+.codex-page-inner .runic {
+  position: absolute;
+  font-family: "Cascadia Mono", monospace;
+  font-size: 0.9rem;
+  color: #5a0000; /* darker blood */
+  opacity: 0.9;
+  letter-spacing: 0.15rem;
+  pointer-events: none;
+}
+
+/* Runic styles */
+.runic.carved {
+  text-shadow: 0 0 2px #300000;
+}
+
+.runic.blood-inked {
+  text-shadow: 0 0 4px #8a0000;
+}
+.codex-image-block {
+  text-align: center;
+  margin-top: 1em;
+}
+
+.codex-image {
+  max-width: 100%;
+  height: auto;
+  border: 2px solid #5c3d2e;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.codex-image-caption {
+  font-style: italic;
+  color: #7a5c4a;
+  margin-top: 0.5em;
+}

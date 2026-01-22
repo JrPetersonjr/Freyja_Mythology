@@ -47,7 +47,12 @@
   }
 
   function init() {
-    window.FREYJA_TABS.buildTabs();
+    // Defensive check to ensure FREYJA_TABS exists
+    if (window.FREYJA_TABS && typeof window.FREYJA_TABS.buildTabs === 'function') {
+      window.FREYJA_TABS.buildTabs();
+    } else {
+      console.error('FREYJA_TABS.buildTabs not available. Check that tabs.js loaded correctly.');
+    }
     bindEvents();
   }
 

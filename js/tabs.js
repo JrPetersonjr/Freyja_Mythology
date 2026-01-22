@@ -21,6 +21,7 @@
   }
 
   function highlightActiveTab(spreadIndex) {
+    if (!tabRail) return;
     const tabs = tabRail.querySelectorAll(".codex-tab");
     tabs.forEach(tab => {
       if (parseInt(tab.dataset.spreadIndex) === spreadIndex) {

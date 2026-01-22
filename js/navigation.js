@@ -40,6 +40,11 @@
     currentSpread = clamped;
     totalSpreads = loader.getTotalSpreads();
     loader.loadSpread(currentSpread);
+    
+    // Highlight active tab
+    if (window.FREYJA_TABS && typeof window.FREYJA_TABS.highlightActive === "function") {
+      window.FREYJA_TABS.highlightActive(currentSpread);
+    }
   }
 
   function next() {

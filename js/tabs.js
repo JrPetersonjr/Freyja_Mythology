@@ -1,40 +1,65 @@
-// js/tabs.js
+// js/tabs.js - Page-based tabs (one per page, like textbook bookmarks)
 
 (function () {
-  const map = window.FREYJA_CONTENT_MAP;
-  if (!map || !Array.isArray(map.chapters)) return;
+  const contentMap = window.FREYJA_CONTENT_MAP;
+  if (!contentMap || !Array.isArray(contentMap)) return;
 
   const tabRail = document.getElementById("codex-tab-rail");
   if (!tabRail) return;
 
-  // You can style these classes in tabs.css
-  function createTab(chapter, index) {
+  // Create a tab for each page
+  function createTab(pageIndex, spreadIndex, label) {
     const tab = document.createElement("button");
     tab.className = "codex-tab";
     tab.type = "button";
-    tab.dataset.chapterId = chapter.id;
-    tab.dataset.chapterIndex = index.toString();
-    tab.textContent = chapter.tabLabel || chapter.title || `Chapter ${index + 1}`;
+    tab.dataset.pageIndex = pageIndex;
+    tab.dataset.spreadIndex = spreadIndex;
+    tab.textContent = label;
+    
     tab.addEventListener("click", () => {
-      if (window.CodexNavigation && typeof window.CodexNavigation.goToChapter === "function") {
-        window.CodexNavigation.goToChapter(index);
+      if (window.CodexNavigation && typeof window.CodexNavigation.goToSpread === "function") {
+        window.CodexNavigation.goToSpread(spreadIndex);
       }
     });
     return tab;
   }
 
-  function populateTabs() {
-    tabRail.innerHTML = "";
-    map.chapters.forEach((chapter, index) => {
-      const tab = createTab(chapter, index);
-      tabRail.appendChild(tab);
+  function highlightActiveTab(spreadIndex) {
+    const tabs = tabRail.querySelectorAll(".codex-tab");
+    tabs.forEach(tab => {
+      if (parseInt(tab.dataset.spreadIndex) === spreadIndex) {
+        tab.classList.add("codex-tab--active");
+      } else {
+        tab.classList.remove("codex-tab--active");
+      }
     });
   }
 
-  // Expose a small API in case you want to refresh later
-  window.CodexTabs = {
-    populate: populateTabs
+  function populateTabs() {
+    tabRail.innerHTML = "";
+    
+    // Create one tab per page
+    contentMap.forEach((section, sectionIndex) => {
+      const pages = section.pages || {};
+      Object.keys(pages).forEach(pageNum => {
+        const pageIndex = parseInt(pageNum) - 1; // 0-indexed
+        const spreadIndex = Math.floor(pageIndex / 2);
+        const label = section.tabLabel || section.title || `Page ${pageNum}`;
+        
+        const tab = createTab(pageIndex, spreadIndex, label);
+        tabRail.appendChild(tab);
+      });
+    });
+  }
+
+  // Expose API
+  window.FREYJA_TABS = {
+    buildTabs: populateTabs,
+    highlightActive: highlightActiveTab
   };
 
-  populateTabs();
+  window.CodexTabs = {
+    populate: populateTabs,
+    highlightActive: highlightActiveTab
+  };
 })();
